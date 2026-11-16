@@ -1,0 +1,17 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "build-monopoly",
+      "appliesTo": "*.cpp",
+      "type": "launch",
+      "command": "g++",
+      "args": [
+        "${file}",
+        "-o",
+        "monopoly.exe",
+        "-mconsole"
+      ]
+    }
+  ]
+}

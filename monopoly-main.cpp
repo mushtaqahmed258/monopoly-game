@@ -10,7 +10,7 @@ void dieRoll(int& d1, int& d2) {
 		std::cout << "Die rolls are : " << d_1 << " and : " << d_2 << "\n";
 		count++;
 		if (count == 3) {
-			std::cout << "Rolled three times!";
+			std::cout << "Rolled enough!";
 			d1 = 0;d2 = 0;
 			return;
 		}

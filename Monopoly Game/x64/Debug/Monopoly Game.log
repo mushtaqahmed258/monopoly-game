@@ -1,3 +1,3 @@
 ﻿  monopoly-main.cpp
-C:\Users\Hinata\source\repos\monopoly-game\monopoly-main.cpp(22,22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Monopoly Game.vcxproj -> C:\Users\Hinata\source\repos\monopoly-game\x64\Debug\Monopoly Game.exe
+C:\Project FOCP End sem\monopoly-game\monopoly-main.cpp(22,22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Monopoly Game.vcxproj -> C:\Project FOCP End sem\monopoly-game\x64\Debug\Monopoly Game.exe

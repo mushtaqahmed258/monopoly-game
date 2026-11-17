@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Monopoly Game\\x64\\Debug\\monopoly-main.obj",
+            "outputs": [
+                "Monopoly Game\\x64\\Debug\\monopoly-main.cpp.obj.dt.module.json",
+                "Monopoly Game\\x64\\Debug\\monopoly-main.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

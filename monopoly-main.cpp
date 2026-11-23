@@ -1,8 +1,9 @@
 #include<iostream>
 #include<cstdlib>
 #include<ctime>
+#include<iomanip>
 
-void dieRoll(int& d1, int& d2) {
+void dieRoll(int& d1,int& d2) {
 	int count = 0, d_1 = 0, d_2 = 0;
 	do {
 		d_1 += std::rand() % 6 + 1;

@@ -18,6 +18,12 @@ void dieRoll(int& d1,int& d2) {
 	} while (d_1 == d_2);
 	d1 = d_1; d2 = d_2;
 }
+void sum()
+{
+	static int count = 0;
+	count++;
+}
+
 int main() {
 	int d1 = 0, d2 = 0, position = 0;
 	std::srand(std::time(0));

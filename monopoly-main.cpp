@@ -23,7 +23,7 @@ void dieRoll(int& d1,int& d2) {
 void sum()
 {
 	static int count = 0;
-	count++;
+	count=+10;
 }
 
 int main() {

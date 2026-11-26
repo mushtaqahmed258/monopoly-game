@@ -2,7 +2,9 @@
 #include<cstdlib>
 #include<ctime>
 #include<iomanip>
-
+void group() {
+	std::cout << "Hello";
+}
 void dieRoll(int& d1,int& d2) {
 	int count = 0, d_1 = 0, d_2 = 0;
 	do {

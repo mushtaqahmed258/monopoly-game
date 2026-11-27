@@ -5,12 +5,17 @@
 #include<ctime>
 #include<iomanip>
 int n = 0;
+int pTurn = 0; //which players turn is it
 int dieRoll();
 int updtPosition(int& position);
+extern std::string place[40];
+
+
 class Player { //class name with capital 'P'
 public:
 	int id;
-	Player (int newid):id(newid){}
+	Player (int newid=1):id(newid){}
+	std::string name;
 	int pos = 0;//position
 	int cash = 1500; //cash
 
@@ -18,24 +23,47 @@ public:
 		pos = updtPosition(pos);
 	}
 };
+
+class Place {
+public:
+	int id;
+	Place (int newid = 0):id(newid){}
+	std::string title;
+	Player owner;
+};
+
 int main() {
 	std::srand(static_cast<unsigned int>(time(nullptr)));//seeding srand
 	std::cout << "======== <<< Monopoly Game >>> ========.\n";
 	std::cout << "Start the game!!\n";
-	std::cout << "How many players : ";
+	/*std::cout << "How many players : ";
 	std::cin >> n;
-	std::vector<Player> players; //vector name with small 'p'
-	for (int i = 0;i < n;i++) {
-		players.push_back(Player(i+1));
+	std::vector<Player> players; //vector name with small 'p'*/
+	constexpr int n = 5;
+	Player players[n];
+	players[0] = Player(0);
+	players[0].name= "Bank";
+	players[0].cash= 6000;//bank cash
+	Place place[40];
+	for (int i = 1;i < (n);i++) {//making objects for each player
+		players[i] = Player(i);
+		//players.push_back(Player(i+1));
 	}
-	int pTurn = 0; //which players turn is it
+
+	for (int i = 0;i < 40;i++) {
+		place[i] = Place(i);
+		std::cout << "\nPlace id's : " << place[i].id+1;
+	}
+
 	while (true) //main-loop
 	{
-		pTurn = 1;
-		std::cout << "Turn of player : " << pTurn + 1 << "\n";
+		pTurn = pTurn%4;
+		std::cout << "\n\nTurn of player : " << ++pTurn << "\n";
 		players[pTurn].turn(players[pTurn]);
-		std::cout << "Position = " << players[pTurn].pos;
-		break;
+		std::cout << "Position = " << players[pTurn].pos << "\n\n";
+		if (pTurn>=4) {
+			break;
+		}
 	}
 }
 int dieRoll() {//simply returns the final sum, after checking three times same case.
@@ -56,3 +84,6 @@ int dieRoll() {//simply returns the final sum, after checking three times same c
 int updtPosition(int& position) {	
 	return ((position + dieRoll()) % 40);
 }
+
+std::string place[40] = { "hello",
+"propert1","jail" };

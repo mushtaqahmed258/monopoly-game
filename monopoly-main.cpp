@@ -4,6 +4,8 @@
 #include<cstdlib>
 #include<ctime>
 #include<iomanip>
+using namespace std;
+
 int n = 0;
 int pTurn = 0; //which players turn is it
 int dieRoll();
@@ -87,3 +89,36 @@ int updtPosition(int& position) {
 
 std::string place[40] = { "hello",
 "propert1","jail" };
+
+
+class Property
+{
+public:
+	int id;
+	string name;
+	string color;
+
+	int price;
+	int ownerId;
+
+	int houses;
+	bool hotel;
+	bool mortgage;
+
+	int rent[6];
+
+	Property()
+	{
+		ownerId = -1;
+		houses = 0;
+		mortgage = false;
+		hotel = false;
+	}
+
+};
+Property properties[28];
+
+int main()
+{
+
+}
